@@ -7,11 +7,13 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 /*
  * 여러 객체에 공통으로 적용되는 기능 - Aspect
  * @Aspect 애노테이션을 적용한 클래스는 Advice와 Pointcut을 함께 제공
  */
 @Aspect
+@Order(1)
 public class ExeTimeAspect {
 	/*
 	 * Pointcut은 공통 기능을 적용할 대상을 설정
